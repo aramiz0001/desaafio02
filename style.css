@@ -1,0 +1,103 @@
+
+:root {
+    --light-royal-blue: #6743ff;
+    --dark-gray-blue: #303b59;
+    --persian-blue: #2421ca;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ecf2ff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.card {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 375px; 
+    display: flex;
+    flex-direction: column; 
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+}
+
+.result-panel {
+    background: linear-gradient(var(--light-royal-blue), var(--persian-blue));
+    color: #cad1ff;
+    text-align: center;
+    padding: 40px;
+    border-radius: 0 0 32px 32px; 
+}
+
+.score-circle {
+    background: linear-gradient(#4d21c9, rgba(37, 33, 202, 0));
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.score-num { font-size: 3.5rem; color: white; font-weight: 800; display: block; }
+.score-total { font-size: 0.9rem; opacity: 0.6; }
+
+.result-panel h2 { color: white; margin: 10px 0; }
+
+.summary-panel {
+    padding: 30px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+
+
+.reaction { background: #fff6f5; color: #ff5555; }
+.memory { background: #fffbf2; color: #ffb21e; }
+.verbal { background: #f2fbfa; color: #00bb8f; }
+.visual { background: #f3f3fd; color: #1125d6; }
+
+.btn-continue {
+    width: 100%;
+    padding: 16px;
+    border-radius: 30px;
+    border: none;
+    background: var(--dark-gray-blue);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+@media (min-width: 700px) {
+    .card {
+        flex-direction: row; 
+        max-width: 700px;
+        border-radius: 32px;
+        overflow: hidden;
+    }
+
+    .result-panel {
+        flex: 1;
+        border-radius: 32px; 
+    }
+
+    .summary-panel {
+        flex: 1;
+        padding: 40px;
+    }
+}
